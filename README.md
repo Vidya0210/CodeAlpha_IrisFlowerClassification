@@ -1,151 +1,152 @@
-# 🌸 Iris Flower Classification Using Machine Learning
+# 🌸 Iris Flower Classification – Interactive Analytics Dashboard
 
 ## 📌 Project Overview
 
 This project is developed as part of the **CodeAlpha Data Science Internship – Task 1**.
 
-The objective is to build a Machine Learning classification model that predicts the species of an Iris flower based on its physical measurements.
+It uses Machine Learning to classify Iris flowers into three species based on four flower measurements. An interactive Streamlit dashboard allows users to enter measurements, predict flower species, explore the dataset, and evaluate model performance.
 
-The model classifies flowers into three species:
-- Iris Setosa
-- Iris Versicolor
-- Iris Virginica
+## 🎯 Objectives
 
-## 🎯 Project Objectives
-
-- Understand and explore the Iris dataset.
-- Perform Exploratory Data Analysis (EDA).
-- Visualize relationships between flower measurements.
-- Preprocess data for Machine Learning.
-- Train a classification model.
-- Evaluate model performance using accuracy and a confusion matrix.
-- Predict the species of a new flower.
+- Explore and analyze the Iris flower dataset.
+- Build a Machine Learning classification model.
+- Predict flower species using user-provided measurements.
+- Visualize relationships between flower features.
+- Evaluate model performance using classification metrics.
 
 ## 🛠️ Technologies Used
 
 - Python
 - Pandas
-- NumPy
+- Scikit-learn
+- Streamlit
+- Plotly
 - Matplotlib
 - Seaborn
-- Scikit-learn
-- VS Code
 
-## 📊 Dataset Description
+## 📊 Dataset Information
 
-The project uses the built-in Iris dataset available in Scikit-learn.
+The project uses `Iris.csv`, containing 150 flower observations and the following columns:
 
-**Dataset information:**
-- Total records: 150
-- Input features: 4
-- Target classes: 3
-- Missing values: 0
+| Feature       | Description        |
+| ------------- | ------------------ |
+| SepalLengthCm | Sepal length in cm |
+| SepalWidthCm  | Sepal width in cm  |
+| PetalLengthCm | Petal length in cm |
+| PetalWidthCm  | Petal width in cm  |
+| Species       | Flower species     |
 
-**Input Features:**
-1. Sepal Length (cm)
-2. Sepal Width (cm)
-3. Petal Length (cm)
-4. Petal Width (cm)
+The three flower species are:
 
-**Target:** Flower species.
+- Iris-setosa
+- Iris-versicolor
+- Iris-virginica
 
-## 🔍 Exploratory Data Analysis
-
-The following visualizations were created:
-
-1. Species Distribution
-2. Pairplot – Feature Relationships
-3. Correlation Heatmap
-4. Petal Length Boxplot
+The `Id` column is not used as a Machine Learning feature.
 
 ## 🤖 Machine Learning Model
 
 **Algorithm:** Logistic Regression
 
-**Preprocessing:**
-- Separated input features and target labels.
-- Split the dataset into training and testing sets.
-- Applied StandardScaler for feature scaling.
+**Preprocessing:** StandardScaler
 
-**Dataset Split:**
-- Training data: 80% (120 records)
-- Testing data: 20% (30 records)
+**Train-test split:** 80% training and 20% testing
 
-## 📈 Model Performance
+**Random state:** 42
 
-**Achieved Accuracy: 93.33%**
+The model is evaluated using:
 
-Evaluation metrics:
 - Accuracy
+- Confusion Matrix
 - Precision
 - Recall
 - F1-score
-- Confusion Matrix
+
+**Observed test accuracy:** 93.33%
+
+## ✨ Dashboard Features
+
+1. **KPI Cards:** Dataset records, input features, species count, and model accuracy.
+2. **Live Flower Prediction:** Predict flower species using four input measurements.
+3. **Prediction Confidence:** Display estimated prediction probabilities.
+4. **Species Distribution:** Visualize the distribution of flower species.
+5. **Feature Relationship:** Explore petal length versus petal width.
+6. **Box Plot:** Compare petal lengths across flower species.
+7. **Correlation Heatmap:** Analyze relationships between numerical features.
+8. **Model Evaluation:** View confusion matrix and classification report.
+9. **Dataset Viewer:** Explore and download filtered dataset records.
 
 ## 📁 Project Structure
 
 ```text
 CodeAlpha_IrisFlowerClassification/
 │
+├── Iris.csv
+├── app.py
 ├── main.py
+├── check_dataset.py
 ├── requirements.txt
 ├── README.md
 │
 └── outputs/
-    ├── species_distribution.png
-    ├── pairplot.png
+    ├── confusion_matrix.png
     ├── correlation_heatmap.png
+    ├── pairplot.png
     ├── petal_boxplot.png
-    └── confusion_matrix.png
+    └── species_distribution.png
 ```
 
-## ⚙️ Installation and Execution
+## ⚙️ Installation and Setup
 
-**Step 1: Clone the repository**
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Vidya0210/CodeAlpha_IrisFlowerClassification.git
 ```
 
-**Step 2: Navigate to the project folder**
+### 2. Navigate to the project folder
 
 ```bash
 cd CodeAlpha_IrisFlowerClassification
 ```
 
-**Step 3: Install dependencies**
+### 3. Install dependencies
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
-**Step 4: Run the project**
+### 4. Run the Streamlit dashboard
 
 ```bash
-python main.py
+python -m streamlit run app.py
 ```
 
-## 🎓 Learning Outcomes
+### 5. Open the application
 
-Through this project, I gained practical experience in:
+Streamlit will provide a local URL, usually:
 
-- Data loading and preprocessing.
-- Exploratory Data Analysis.
-- Data visualization.
-- Classification algorithms.
-- Model training and testing.
-- Machine Learning model evaluation.
+```text
+http://localhost:8501
+```
+
+## 📈 Results
+
+- Successfully loaded 150 valid dataset observations.
+- Classified three Iris flower species.
+- Achieved 93.33% test accuracy in the displayed evaluation.
+- Built an interactive dashboard with live prediction and visual analytics.
 
 ## 👩‍💻 Internship Information
 
-**Organization:** CodeAlpha
-
-**Domain:** Data Science
+**Program:** CodeAlpha Data Science Internship
 
 **Task:** Task 1 – Iris Flower Classification
 
-**GitHub Repository:** https://github.com/Vidya0210/CodeAlpha_IrisFlowerClassification
+## 🔗 GitHub Repository
+
+[CodeAlpha Iris Flower Classification](https://github.com/Vidya0210/CodeAlpha_IrisFlowerClassification)
 
 ---
 
-*Developed as part of the CodeAlpha Data Science Internship.*
+_Developed as part of my journey in Data Science and Machine Learning._ 🌸
